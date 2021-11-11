@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:miniproject/04-11-2021%20Class%2024/HomePage.dart';
 import 'package:miniproject/04-11-2021%20Class%2024/LoadingPage.dart';
 import 'package:miniproject/04-11-2021%20Class%2024/loginPage.dart';
+
 
 void main() {
   runApp(const MyApp());
