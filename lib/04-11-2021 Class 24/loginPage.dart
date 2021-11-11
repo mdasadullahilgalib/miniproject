@@ -17,59 +17,63 @@ class _loginPageState extends State<loginPage> {
     return Scaffold(
       backgroundColor: Colors.blueAccent,
       body: Center(
-        child: Column(
-          children: [
-            Image.asset('assets/logo.png',height: 250,width: 350,),
-            Text("Sign In",style: TextStyle(fontSize: 40,fontWeight: FontWeight.w900),),
+        child: Padding(
+          padding: const EdgeInsets.only(left: 30,right: 30),
+          child: Column(
+            children: [
+              Image.asset('assets/logo.png',height: 250,width: 350,),
+              Text("Sign In",style: TextStyle(fontSize: 40,fontWeight: FontWeight.w900),),
 
-            TextFormField(
-              keyboardType: TextInputType.name,
-              decoration: InputDecoration(
-                  border: OutlineInputBorder(),
-                  labelText: 'User Name'
+              TextFormField(
+                keyboardType: TextInputType.name,
+                decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    labelText: 'User Name'
+
+                ),
+
+              ),
+              SizedBox(height: 20,),
+
+              TextFormField(
+                obscureText: true,
+                keyboardType: TextInputType.name,
+                decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    labelText: 'Password'
+
+                ),
 
               ),
 
-            ),
-            SizedBox(height: 20,),
+              SizedBox(height: 20,),
+              RaisedButton(onPressed: (){
 
-            TextFormField(
-              keyboardType: TextInputType.name,
-              decoration: InputDecoration(
-                  border: OutlineInputBorder(),
-                  labelText: 'Password'
-
-              ),
-
-            ),
-
-            SizedBox(height: 20,),
-            RaisedButton(onPressed: (){
-
-              Navigator.push(context, MaterialPageRoute(builder: (context)=>PrecovaryPage()));
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>PrecovaryPage()));
 
 
-            },child: Text("Forget Password"),),
-            SizedBox(height: 20,),
+              },child: Text("Forget Password"),),
+              SizedBox(height: 20,),
 
-            RaisedButton(onPressed: (){
+              RaisedButton(onPressed: (){
 
-              Navigator.push(context, MaterialPageRoute(builder: (context)=>Desdboard()));
-
-
-            },child: Text("LogIn, "),),
-            SizedBox(height: 20,),
-            Text("Dont Have"),
-            SizedBox(height: 20,),
-
-            RaisedButton(onPressed: (){
-
-              Navigator.push(context, MaterialPageRoute(builder: (context)=>RegistrationPage()));
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>Desdboard()));
 
 
-            },child: Text("SignUp"),),
+              },child: Text("LogIn, "),),
+              SizedBox(height: 20,),
+              Text("Dont Have"),
+              SizedBox(height: 20,),
 
-          ],
+              RaisedButton(onPressed: (){
+
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>RegistrationPage()));
+
+
+              },child: Text("SignUp"),),
+
+            ],
+          ),
         ),
       ),
     );
